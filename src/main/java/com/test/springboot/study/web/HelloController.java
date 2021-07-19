@@ -1,5 +1,6 @@
 package com.test.springboot.study.web;
 
+import com.test.springboot.study.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -25,6 +26,15 @@ Step 6. HelloController
 
     @GetMapping
         주소창에 오는 정보(get method)를 매핑해 줘
+
+Step 11.
+    /hello   (http://localhost:8080/hello)
+    /hello/dto 처리해줘  vs. /dto
+
+    @RequestParam
+        외부API 넘어온 파라미터를 가져오는 annotation
+
+    HelloControllerTest와 관련이 있다.
  */
 
 @RestController
@@ -34,9 +44,9 @@ public class HelloController {
         return "hello";
     }
 
-    // @GetMapping 를 다음처럼 수정 (Step 7)
-    @GetMapping("/test")
-    public String test() {
-        return "test";
+    @GetMapping("/hello/dto")
+    public HelloResponseDto helloDto(@RequestParam("name") String name,
+                                     @RequestParam("amount") int amount) {
+        return new HelloResponseDto(name, amount);
     }
 }

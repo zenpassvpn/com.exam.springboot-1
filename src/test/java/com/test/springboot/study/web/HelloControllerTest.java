@@ -1,13 +1,16 @@
 package com.test.springboot.study.web;
 
-import com.test.springboot.study.web.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
+
+import static org.hamcrest.Matchers.is;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -45,7 +48,10 @@ Step 7
         5xx: Server Error
             501 : Gateway Error
         6xx: Global Error
-
+Step 11 계속
+    주소창에
+    http://localhost:8080/hello/dto/name=홍길동&amount=1234 와 같은 처리를 위해
+    코드가 변경
  */
 
 @ExtendWith(SpringExtension.class)
@@ -61,5 +67,22 @@ public class HelloControllerTest {
         mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(hello));
+    }
+
+    @Test
+    public void helloDtoReturnTest() throws Exception {
+        String name = "hello Spring Boot User";
+        int amount = 1234;
+
+        // localhost:8080/hello/dto/?name=홍길동&amount=1234
+        mvc.perform(get("/hello/dto")
+                    .param("name", name)
+                    .param("amount", String.valueOf(amount)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name", is(name)))
+                .andExpect(jsonPath("$.amount", is(amount)));
+
+
+
     }
 }
