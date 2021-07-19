@@ -1,4 +1,4 @@
-package com.test.springboot.stuty.web;
+package com.test.springboot.study.web;
 
 import com.test.springboot.study.web.HelloController;
 import org.junit.jupiter.api.Test;
