@@ -34,7 +34,8 @@ public class HelloController {
         return "hello";
     }
 
-    @GetMapping
+    // @GetMapping 를 다음처럼 수정 (Step 7)
+    @GetMapping("/test")
     public String test() {
         return "test";
     }
