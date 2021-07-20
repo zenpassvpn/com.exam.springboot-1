@@ -18,3 +18,9 @@ public class PostsService {
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 }
+
+/*
+    study/web/dto/PostsSaveRequestDto
+    study/service/posts/PostsService
+    study/web/PostsApiController
+ */
