@@ -17,3 +17,5 @@ public class PostsApiController {
         return postsService.save(requestDto);
     }
 }
+
+///   study.service.posts
