@@ -74,6 +74,9 @@ public class HelloControllerTest {
         String name = "hello Spring Boot User";
         int amount = 1234;
 
+        /*
+        JPA 사용하지 않았을 때, MockMvc
+         */
         // localhost:8080/hello/dto/?name=홍길동&amount=1234
         mvc.perform(get("/hello/dto")
                     .param("name", name)

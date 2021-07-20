@@ -38,8 +38,9 @@ public class PostsApiControllerTest {
 
     @Test
     public void PostsCheckRegister() throws Exception {
-        String title = "title";
-        String content = "content";
+        String title = "titleABC";
+        String content = "contentTEST";
+
         PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
                 .title(title).content(content).author("author").build();
 

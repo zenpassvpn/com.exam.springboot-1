@@ -24,6 +24,12 @@ public class PostsSaveRequestDto {
     }
 
     public Posts toEntity() {
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("title = " + title);
+        System.out.println("content = " + content);
+
+
         return Posts.builder().title(title).content(content).author(author).build();
     }
 }
