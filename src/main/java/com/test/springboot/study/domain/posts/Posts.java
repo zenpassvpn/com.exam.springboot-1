@@ -27,9 +27,12 @@ JPA를 이용하기 위해 build.gradle 에 추가
     @GeneratedValue : 키 생성
 
     create table posts (
-        id long primary key,
-        title char(500) not null,
-        ...
+       id long auto_increment,
+       title,
+       author,
+       content,
+
+       primary key(id)
     )
  */
 @Getter
