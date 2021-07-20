@@ -26,8 +26,10 @@ public class PostsService {
      */
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
+        System.out.println("----------------------- Service.update()");
         Posts posts = postsRepository.findById(id).orElseThrow(()->
                 new IllegalArgumentException("찾는 원본 게시글 없음. id = " + id));
+
         posts.update(requestDto.getTitle(), requestDto.getContent());
         return id;
     }

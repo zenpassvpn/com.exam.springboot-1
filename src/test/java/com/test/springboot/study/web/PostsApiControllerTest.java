@@ -22,6 +22,12 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/*
+    insert into posts (id, time) values('1', now())
+    Date()
+
+ */
+
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest {
@@ -58,7 +64,7 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
-    /* Step 27 PostApiControllerTest update 코드 추가 */
+    /* Step 27 PostApiControllerTest */
     @Test
     public void PostsCheckUpdate() throws Exception {
         Posts savedPosts = postsRepository.save(Posts.builder()

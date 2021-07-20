@@ -1,7 +1,6 @@
 package com.test.springboot.study.web.dto;
 
 import com.test.springboot.study.domain.posts.Posts;
-import com.test.springboot.study.domain.posts.Posts;
 import lombok.Getter;
 
 @Getter

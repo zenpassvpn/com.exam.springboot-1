@@ -9,11 +9,15 @@ Step 5. 프로그램의 시작포인트를 만든다: main()
 
     http://localhost:8080/hello/dto/?name=홍길동&amount=123
     http://localhost:8080/hello/dto?name=홍길동&amount=123
+
+    http://localhost:8080/h2-console
  */
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
