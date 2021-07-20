@@ -22,6 +22,6 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
 
-        assertThat(body).contains("완전일치문자열");
+        assertThat(body).contains("TEST");
     }
 }

@@ -1,44 +1,10 @@
-<!doctype html>
-<html lang="ko">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes maixmum-scale=3.0">
-    <title>HTML5 기본페이지</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <style>
-html, body { max-width:100%; overflow-x:hidden;}
-body{
-	height:100%;
-	width:100%;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	position:relative;
-}
+{{>layout/header}}
 
-table { border-collapse: collapse; }
-.row { line-height:200%; min-width:100%; min-height:30px; height:auto; padding-top:5px; border:0px solid #FFFFFF; }
-.rowLine { line-height:200%; min-width:100%; min-height:30px; border-bottom:1px dotted #DDDDDD; height:auto; }
-.ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width:0;
-}
+    <div class="row">
+        <div class="col">
+            Mustache Test
+        </div>
+    </div>
 
-</style>
-
-</head>
-<body>
-<div class="container">
-
-
-
-</div>
-<!-- container -->
-</body>
-</html>
+{{>layout/footer}}
 
