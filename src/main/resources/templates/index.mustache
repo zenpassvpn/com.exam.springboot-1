@@ -14,8 +14,29 @@
         </div>
     </div>
 
+    <!--
+        순서, 제목, 작성자, (내용), 최종수정일
+        DB에서 목록을 가져와서 반복해서 뿌려준다.
 
-    <p class="test">스타일쉬트 테스트</p>
+            for, while()
+    -->
+
+    <div class="row rowLine">
+        <div class="col-1">번호</div>
+        <div class="col-1">제목</div>
+        <div class="col-1">작성자</div>
+        <div class="col-1">수정일</div>
+    </div>
+
+    {{#posts}}
+        <div class="row rowLine">
+            <div class="col-1">{{id}}</div>
+            <div class="col-1">{{title}}</div>
+            <div class="col-1">{{author}}</div>
+            <div class="col-1">{{modifiedDate}}</div>
+        </div>
+    {{/posts}}
+
 
 {{>layout/footer}}
 
