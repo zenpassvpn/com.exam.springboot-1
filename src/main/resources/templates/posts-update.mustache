@@ -1,0 +1,48 @@
+{{>layout/header}}
+
+<div class="row">
+    <div class="col text-primary">
+        <h4>글 수정</h4>
+    </div>
+</div>
+
+<form>
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">번호</div>
+        <div class="col-9 col-md-10">
+            <input type="text" id="id"  value="{{posts.id}}" readonly class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">제목</div>
+        <div class="col-9 col-md-10">
+            <input type="text" id="title" placeholder="제목 입력" value="{{posts.title}}" required class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">작성자</div>
+        <div class="col-9 col-md-10">
+            <input type="text" id="author" placeholder="실명을 입력하세요" value="{{posts.author}}" readonly class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">내용</div>
+        <div class="col-9 col-md-10">
+                <textarea id="content" class="form-control" rows="15">{{posts.content}}</textarea>
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col text-center">
+            <button type="button" class="btn btn-primary" id="btn-update">변경완료</button>
+            <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+
+            <button type="button" class="btn btn-secondary"  onClick="location.href='/'">취소</button>
+        </div>
+    </div>
+</form>
+
+{{>layout/footer}}

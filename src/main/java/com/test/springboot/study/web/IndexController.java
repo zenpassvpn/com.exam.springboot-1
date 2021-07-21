@@ -2,10 +2,12 @@ package com.test.springboot.study.web;
 
 
 import com.test.springboot.study.service.posts.PostsService;
+import com.test.springboot.study.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /*
 객체로 넘어온 데이터를 템플릿 엔진(mustache)에 넘겨준다.
@@ -30,6 +32,13 @@ public class IndexController {
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
+    }
+
+    @GetMapping("/posts/update/{id}")
+    public String postUpdate(@PathVariable Long id, Model model) {
+        PostsResponseDto dto = postsService.findById(id);
+        model.addAttribute("posts", dto);
+        return "posts-update";
     }
 }
 
