@@ -2,7 +2,7 @@
       init : function () {
           var _this = this;
           $('#btn-save').on('click', function () {
-
+                alert('btn save clicked');
               _this.save();
           });
       },

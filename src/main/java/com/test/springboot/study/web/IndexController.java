@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 
 
+    /*
+    Step 31:
+
+        http://localhost:8080/
+     */
+
     @GetMapping("/")
     public String index() {
         return "index";
