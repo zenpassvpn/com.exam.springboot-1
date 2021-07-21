@@ -6,8 +6,35 @@
     </div>
 </div>
 
-제목 : _____________<br>
-이름 : _____________<br>
-내용 : _____________<br>
+<form>
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">제목</div>
+        <div class="col-9 col-md-10">
+            <input type="text" id="title" placeholder="제목 입력" required class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">작성자</div>
+        <div class="col-9 col-md-10">
+            <input type="text" id="author" placeholder="실명을 입력하세요"  required class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col-3 col-md-2">내용</div>
+        <div class="col-9 col-md-10">
+                <textarea id="content" class="form-control" rows="15">
+
+                </textarea>
+        </div>
+    </div>
+
+    <div class="row rowLine">
+        <div class="col text-center">
+            <button type="submit" class="btn btn-primary" id="btn-save">완료</button>
+        </div>
+    </div>
+</form>
 
 {{>layout/footer}}
