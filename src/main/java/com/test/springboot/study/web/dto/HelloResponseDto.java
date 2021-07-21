@@ -17,7 +17,7 @@ File > Setting > Build, Execution...> Annotation Process.. >
 @Getter
     필드의 get method()자동 생성
 @RequiredArgsConstructor
-    선언된 final field가 포함된 생성자 생성자
+    선언된 final field가 포함된 생성자     ㅇㄹ
  */
 
 @Getter
